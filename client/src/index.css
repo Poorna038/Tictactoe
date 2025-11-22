@@ -316,3 +316,84 @@ input:focus, button:focus { outline: 2px solid rgba(79,212,198,0.18); outline-of
 
 .center { display:flex; align-items:center; justify-content:center; }
 .hidden { display:none !important; }
+/* Extra tuning for small phones */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  .app-shell {
+    height: auto;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 100%;
+    min-width: unset;
+    padding: 20px;
+  }
+
+  .play-layout {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .center-panel {
+    width: 100%;
+  }
+
+  /* Make the board a bit smaller on phone */
+  .grid {
+    width: 72vw;
+    height: 72vw;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .cell {
+    font-size: 28px;
+  }
+
+  /* Player panels more compact */
+  .player-panel {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 14px;
+    gap: 8px;
+  }
+
+  .avatar-circle {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .player-name {
+    font-size: 14px;
+  }
+
+  .player-role,
+  .player-turn,
+  .timer-badge {
+    font-size: 12px;
+  }
+
+  /* Inputs & buttons full-width on phone */
+  .nickname-input,
+  .input,
+  button.btn,
+  .btn-primary,
+  .btn-ghost,
+  .btn-cancel {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nickname-actions {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+}
