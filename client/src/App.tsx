@@ -68,7 +68,8 @@ function AppInner() {
       setRoomCode(roomCodeOptional ?? null);
     }
 
-    const ws = new WebSocket("ws://localhost:8000/ws");
+    const ws = new WebSocket("wss://<your-backend>.onrender.com/ws");
+
     socketRef.current = ws;
 
     ws.onopen = () => {
