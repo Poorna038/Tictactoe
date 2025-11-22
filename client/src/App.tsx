@@ -68,7 +68,7 @@ function AppInner() {
       setRoomCode(roomCodeOptional ?? null);
     }
 
-    const ws = new WebSocket("wss://<your-backend>.onrender.com/ws");
+    const ws = new WebSocket("wss://tictactoe-bvax.onrender.com/ws");
 
     socketRef.current = ws;
 
